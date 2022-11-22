@@ -10,8 +10,15 @@ public class Bear {
 		this.posY = posY;
 		this.distance = distance;
 	}
+	
+	public int getX() {
+		return this.posX;
+	}
+	public int getY() {
+		return this.posY;
+	}
 
-	protected void move() {
+	public void move() {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("�̵� - ����(a), ������(d), ��(w), �Ʒ�(s) >> ");
 		
@@ -36,7 +43,7 @@ public class Bear {
 		}
 
 	}
-	protected char getShape() {
+	public char getShape() {
 		return 'B';
 	}
 	void predation() {
