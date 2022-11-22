@@ -1,38 +1,46 @@
 package Animal;
 
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.event.KeyEvent;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyListener;
-
-import javax.swing.JPanel;
+import java.util.Scanner;
 
 public class Bear {
-	int posX, posY;
+	int posX, posY, distance;
+	
+	public Bear(int posX, int posY, int distance) {
+		this.posX = posX;
+		this.posY = posY;
+		this.distance = distance;
+	}
 
-	void move(int moveRange) {
+	protected void move() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("�̵� - ����(a), ������(d), ��(w), �Ʒ�(s) >> ");
 		
+		String wasd = sc.next();
+		switch(wasd) {
+		case "w":
+			if(this.posY > 0)
+				this.posY -= this.distance;
+			break;
+		case "a":
+			if(this.posX > 0)
+				this.posX -= this.distance;
+			break;
+		case "s":
+			if(this.posY < 19)
+				this.posY += this.distance;
+			break;
+		case "d":
+			if(this.posX < 9)
+				this.posX += this.distance;
+			break;
+		}
+
+	}
+	protected char getShape() {
+		return 'B';
 	}
 	void predation() {
 		
 	}
 
-@Override
-public void keyPressed(KeyEvent e) {
-	int input = e.getKeyCode();
-	if (input == 40) {
-		
-	}
-	else if (input == 38) {
-		
-	}
-	else if (input == 37) {
-		
-	}
-	else if (input == 39) {
-		
-	}
-}
 }
