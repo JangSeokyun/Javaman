@@ -4,61 +4,98 @@ import javax.swing.*;
 
 public class MainPanel extends JFrame {
 	public MainPanel(JFrame frame) {
+		//Font font = new Font("neo둥근모 pro", Font.PLAIN, 30);
 		Container contentPane = frame.getContentPane();
 		contentPane.setBackground(new Color(0xECD8C8));		// ��� �� ĥ�ϱ�
 		contentPane.setLayout(null);						// �׸��� ���̾ƿ� - ��ġ�� ����
 		
-		/*-------------------------------곰 모드 선택 버튼---------------------------------*/
-		JButton BearModeBtn = new JButton("곰 모드");
-		BearModeBtn.setSize(150, 40);						// ���۹�ư ũ��
-		BearModeBtn.setLocation(275, 300); 				// ���۹�ư ��ġ
-		BearModeBtn.setForeground(Color.WHITE);			// ���۹�ư �۾� ����
-		BearModeBtn.setBackground(new Color(0x013a63));	// ���۹�ư ����
-		BearModeBtn.setFont(new Font("Neo둥근체", Font.PLAIN, 20));	// ���۹�ư ��Ʈ
-		contentPane.add(BearModeBtn); // ���۹�ư �ޱ�
-		
-		/*---------------------------------물고기 모드 선택 버튼----------------------------------*/
-		JButton FishModeBtn = new JButton("물고기 모드");
-		FishModeBtn.setSize(150, 40);						// ��ŷ��ư ũ��
-		FishModeBtn.setLocation(450, 300);					// ��ŷ��ư ��ġ
-		FishModeBtn.setForeground(Color.WHITE);				// ��ŷ��ư �۾� ����
-		FishModeBtn.setBackground(new Color(0x5e3023));		// ��ŷ��ư ����
-		FishModeBtn.setFont(new Font("Neo둥근체", Font.PLAIN, 20));	// ��ŷ��ư ��Ʈ
-		contentPane.add(FishModeBtn); // ��ŷ��ư �ޱ�
-		/*-------------------------------무한 포식 모드 선택 버튼---------------------------------*/
-		JButton InfiniteModeBtn = new JButton("무한 포식 모드");
-		InfiniteModeBtn.setSize(150, 40);						// ���۹�ư ũ��
-		InfiniteModeBtn.setLocation(100, 300); 				// ���۹�ư ��ġ
-		InfiniteModeBtn.setForeground(Color.WHITE);			// ���۹�ư �۾� ����
-		InfiniteModeBtn.setBackground(new Color(0x013a63));	// ���۹�ư ����
-		InfiniteModeBtn.setFont(new Font("Neo둥근체", Font.PLAIN, 20));	// ���۹�ư ��Ʈ
-		contentPane.add(InfiniteModeBtn); // ���۹�ư �ޱ�
-		
-		/*-----------------------------------����-----------------------------------*/
+		/*-----------------------------------Title-----------------------------------*/
 		JLabel Title = new JLabel("Kuma-Gotchi", SwingConstants.CENTER);
-		Title.setBounds(210, 60, 274, 50);
-		Title.setFont(new Font("Neo둥근체", Font.BOLD, 40));
-		Title.setForeground(Color.WHITE);
-		contentPane.add(Title);
-		/*-----------------------------------����-----------------------------------*/
-		JLabel ModeTitle = new JLabel("모드 선택", SwingConstants.CENTER);
-		Title.setBounds(210, 60, 274, 50);
+		Title.setBounds(210, 40, 274, 50);
 		Title.setFont(new Font("Neo둥근체", Font.BOLD, 40));
 		Title.setForeground(Color.WHITE);
 		contentPane.add(Title);
 		
-		/*-----------------------------------����-----------------------------------*/
-		ImageIcon Bear = new ImageIcon("images/mainbear.png");
-		Image img = Bear.getImage();
-		Image changeImg = img.getScaledInstance(350,350,Image.SCALE_SMOOTH);
+		/*-------------------------------Bear Mode Select Button---------------------------------*/
+		JPanel main_panel; // 버튼을 붙여질 메인 패널 선언
+		JButton bt_img;
+		ImageIcon imgb = new ImageIcon("images/BearBtn.png");
+		ImageIcon imgb2 = new ImageIcon("images/BearBtnPress.png");
+		/*--------------------------------------------------------------------------------------*/
+		setSize(275,500); // 프레임 크기 조정(픽셀)
+		main_panel = new JPanel(); // 패널 객체화 / 기본배치관리자 FlowLayout
+		main_panel.setBackground(Color.WHITE); // 패널 배경색 하얀색으로 설정
+		bt_img = new JButton(imgb);
+		bt_img.setRolloverIcon(imgb2); // 버튼에 마우스가 올라갈떄 이미지 변환
+		bt_img.setBorderPainted(false); // 버튼 테두리 설정해제
+		bt_img.setPreferredSize(new Dimension(140, 30)); // 버튼 크기 지정
+		main_panel.add(bt_img); // 패널에 버튼을 붙여준다
+		add(main_panel); // 메인 프레임에 메인패널을 붙여주는 작업
+		setVisible(true); // 프레임 보이게 하기
+		contentPane.add(bt_img);
+		
+		/*---------------------------------Fish Mode Select Button----------------------------------*/
+		JPanel main_pane2; // 버튼을 붙여질 메인 패널 선언
+		JButton bt_img2;
+		ImageIcon imgf = new ImageIcon("images/FishBtn.png");
+		ImageIcon imgf2 = new ImageIcon("images/FishBtnPress.png");
+		/*--------------------------------------------------------------------------------------*/
+		setSize(700,500); // 프레임 크기 조정(픽셀)
+		main_pane2 = new JPanel(); // 패널 객체화 / 기본배치관리자 FlowLayout
+		main_pane2.setBackground(Color.WHITE); // 패널 배경색 하얀색으로 설정
+		bt_img2 = new JButton(imgf);
+		bt_img2.setRolloverIcon(imgf2); // 버튼에 마우스가 올라갈떄 이미지 변환
+		bt_img2.setBorderPainted(false); // 버튼 테두리 설정해제
+		bt_img2.setPreferredSize(new Dimension(140, 30)); // 버튼 크기 지정
+		main_pane2.add(bt_img2); // 패널에 버튼을 붙여준다
+		add(main_pane2); // 메인 프레임에 메인패널을 붙여주는 작업
+		setVisible(true); // 프레임 보이게 하기
+		contentPane.add(bt_img2);
+		
+		/*-------------------------------Infinite Mode Select Button---------------------------------*/
+		JPanel main_pane3; // 버튼을 붙여질 메인 패널 선언
+		JButton bt_img3;
+		ImageIcon imgi = new ImageIcon("images/InfiniteBtn.png");
+		ImageIcon imgi2 = new ImageIcon("images/InfiniteBtnPress.png");
+		/*--------------------------------------------------------------------------------------*/
+		setSize(1000,500); // 프레임 크기 조정(픽셀)
+		main_pane3 = new JPanel(); // 패널 객체화 / 기본배치관리자 FlowLayout
+		main_pane3.setBackground(Color.WHITE); // 패널 배경색 하얀색으로 설정
+		bt_img3 = new JButton(imgi);
+		bt_img3.setRolloverIcon(imgi2); // 버튼에 마우스가 올라갈떄 이미지 변환
+		bt_img3.setBorderPainted(false); // 버튼 테두리 설정해제
+		bt_img3.setPreferredSize(new Dimension(140, 30)); // 버튼 크기 지정
+		main_pane3.add(bt_img3); // 패널에 버튼을 붙여준다
+		add(main_pane3); // 메인 프레임에 메인패널을 붙여주는 작업
+		setVisible(true); // 프레임 보이게 하기
+		contentPane.add(bt_img3);
+		
+		/*-----------------------------------Option Window-----------------------------------*/
+		ImageIcon OptionWindow = new ImageIcon("images/OptionWindow.png");
+		Image img = OptionWindow.getImage();
+		Image changeImg = img.getScaledInstance(350,300,Image.SCALE_SMOOTH);
 		ImageIcon changeIcon = new ImageIcon(changeImg);
-		// �� �ڵ�� ���� ũ�� ���� ������, ���� �ٲٸ� �ʿ�X
+		JLabel OptionW = new JLabel(changeIcon);
+		OptionW.setBounds(175, 100, 350, 350);
+		contentPane.add(OptionW);
 		
-		JLabel MainBear = new JLabel(changeIcon);
-		MainBear.setBounds(175, 130, 350, 350);
-		contentPane.add(MainBear);
+		/*-----------------------------------Right Bear-----------------------------------*/
+		ImageIcon RightBear = new ImageIcon("images/RightBear.png");
+		Image img2 = RightBear.getImage();
+		Image changeImg2 = img2.getScaledInstance(260,400,Image.SCALE_SMOOTH);
+		ImageIcon changeIcon2 = new ImageIcon(changeImg2);
+		JLabel RightBear1 = new JLabel(changeIcon2);
+		RightBear1.setBounds(450, 50, 260, 400);
+		contentPane.add(RightBear1);
+		
+		/*-----------------------------------Left Bear-----------------------------------*/
+		ImageIcon LeftBear = new ImageIcon("images/LeftBear.png");
+		Image img3 = LeftBear.getImage();
+		Image changeImg3 = img3.getScaledInstance(260,400,Image.SCALE_SMOOTH);
+		ImageIcon changeIcon3 = new ImageIcon(changeImg3);
+		JLabel LeftBear1 = new JLabel(changeIcon3);
+		LeftBear1.setBounds(-20, 50, 260, 400);
+		contentPane.add(LeftBear1);
 		
 	}
-	
-
 }
