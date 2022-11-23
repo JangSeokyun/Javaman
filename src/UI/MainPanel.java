@@ -17,58 +17,28 @@ public class MainPanel extends JFrame {
 		contentPane.add(Title);
 		
 		/*-------------------------------Bear Mode Select Button---------------------------------*/
-		JPanel main_panel; // 버튼을 붙여질 메인 패널 선언
-		JButton bt_img;
-		ImageIcon imgb = new ImageIcon("images/BearBtn.png");
-		ImageIcon imgb2 = new ImageIcon("images/BearBtnPress.png");
-		/*--------------------------------------------------------------------------------------*/
-		setSize(275,500); // 프레임 크기 조정(픽셀)
-		main_panel = new JPanel(); // 패널 객체화 / 기본배치관리자 FlowLayout
-		main_panel.setBackground(Color.WHITE); // 패널 배경색 하얀색으로 설정
-		bt_img = new JButton(imgb);
-		bt_img.setRolloverIcon(imgb2); // 버튼에 마우스가 올라갈떄 이미지 변환
-		bt_img.setBorderPainted(false); // 버튼 테두리 설정해제
-		bt_img.setPreferredSize(new Dimension(140, 30)); // 버튼 크기 지정
-		main_panel.add(bt_img); // 패널에 버튼을 붙여준다
-		add(main_panel); // 메인 프레임에 메인패널을 붙여주는 작업
-		setVisible(true); // 프레임 보이게 하기
-		contentPane.add(bt_img);
+		JButton BearModeBtn = new JButton("");
+		BearModeBtn.setIcon(new ImageIcon("images/BearBtn.png"));
+		BearModeBtn.setSelectedIcon(new ImageIcon("images/BearBtn.png"));
+		BearModeBtn.setBounds(275, 210, 140, 30);
+		BearModeBtn.setPressedIcon(new ImageIcon("images/BearBtnPress.png"));
+		contentPane.add(BearModeBtn);
 		
 		/*---------------------------------Fish Mode Select Button----------------------------------*/
-		JPanel main_pane2; // 버튼을 붙여질 메인 패널 선언
-		JButton bt_img2;
-		ImageIcon imgf = new ImageIcon("images/FishBtn.png");
-		ImageIcon imgf2 = new ImageIcon("images/FishBtnPress.png");
-		/*--------------------------------------------------------------------------------------*/
-		setSize(700,500); // 프레임 크기 조정(픽셀)
-		main_pane2 = new JPanel(); // 패널 객체화 / 기본배치관리자 FlowLayout
-		main_pane2.setBackground(Color.WHITE); // 패널 배경색 하얀색으로 설정
-		bt_img2 = new JButton(imgf);
-		bt_img2.setRolloverIcon(imgf2); // 버튼에 마우스가 올라갈떄 이미지 변환
-		bt_img2.setBorderPainted(false); // 버튼 테두리 설정해제
-		bt_img2.setPreferredSize(new Dimension(140, 30)); // 버튼 크기 지정
-		main_pane2.add(bt_img2); // 패널에 버튼을 붙여준다
-		add(main_pane2); // 메인 프레임에 메인패널을 붙여주는 작업
-		setVisible(true); // 프레임 보이게 하기
-		contentPane.add(bt_img2);
+		JButton FishModeBtn = new JButton("");
+		FishModeBtn.setIcon(new ImageIcon("images/FishBtn.png"));
+		FishModeBtn.setSelectedIcon(new ImageIcon("images/FishBtn.png"));
+		FishModeBtn.setBounds(275, 260, 140, 30);
+		FishModeBtn.setPressedIcon(new ImageIcon("images/FishBtnPress.png"));
+		contentPane.add(FishModeBtn);
 		
 		/*-------------------------------Infinite Mode Select Button---------------------------------*/
-		JPanel main_pane3; // 버튼을 붙여질 메인 패널 선언
-		JButton bt_img3;
-		ImageIcon imgi = new ImageIcon("images/InfiniteBtn.png");
-		ImageIcon imgi2 = new ImageIcon("images/InfiniteBtnPress.png");
-		/*--------------------------------------------------------------------------------------*/
-		setSize(1000,500); // 프레임 크기 조정(픽셀)
-		main_pane3 = new JPanel(); // 패널 객체화 / 기본배치관리자 FlowLayout
-		main_pane3.setBackground(Color.WHITE); // 패널 배경색 하얀색으로 설정
-		bt_img3 = new JButton(imgi);
-		bt_img3.setRolloverIcon(imgi2); // 버튼에 마우스가 올라갈떄 이미지 변환
-		bt_img3.setBorderPainted(false); // 버튼 테두리 설정해제
-		bt_img3.setPreferredSize(new Dimension(140, 30)); // 버튼 크기 지정
-		main_pane3.add(bt_img3); // 패널에 버튼을 붙여준다
-		add(main_pane3); // 메인 프레임에 메인패널을 붙여주는 작업
-		setVisible(true); // 프레임 보이게 하기
-		contentPane.add(bt_img3);
+		JButton InfiniteModeBtn = new JButton("");
+		InfiniteModeBtn.setIcon(new ImageIcon("images/InfiniteBtn.png"));
+		InfiniteModeBtn.setSelectedIcon(new ImageIcon("images/InfiniteBtn.png"));
+		InfiniteModeBtn.setBounds(275, 310, 140, 30);
+		InfiniteModeBtn.setPressedIcon(new ImageIcon("images/InfiniteBtnPress.png"));
+		contentPane.add(InfiniteModeBtn);
 		
 		/*-----------------------------------Option Window-----------------------------------*/
 		ImageIcon OptionWindow = new ImageIcon("images/OptionWindow.png");
