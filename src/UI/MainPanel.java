@@ -4,68 +4,46 @@ import javax.swing.*;
 
 public class MainPanel extends JFrame {
 	public MainPanel(JFrame frame) {
-		//Font font = new Font("neo둥근모 pro", Font.PLAIN, 30);
 		Container contentPane = frame.getContentPane();
-		contentPane.setBackground(new Color(0xECD8C8));		// ��� �� ĥ�ϱ�
-		contentPane.setLayout(null);						// �׸��� ���̾ƿ� - ��ġ�� ����
+		contentPane.setBackground(new Color(0xECD8C8));	
+		contentPane.setLayout(null);					
+		
+		/*-------------------------------Game Start---------------------------------*/
+		JButton StartBtn = new JButton("게임 시작");
+		StartBtn.setSize(150, 40);					
+		StartBtn.setLocation(100, 300); 			
+		StartBtn.setForeground(Color.WHITE);			
+		StartBtn.setBackground(new Color(0x013a63));	
+		StartBtn.setFont(new Font("Neo�ձٸ�", Font.PLAIN, 20));
+		contentPane.add(StartBtn); // ���۹�ư �ޱ�
+		
+		/*---------------------------------Rank----------------------------------*/
+		JButton RankBtn = new JButton("랭킹");
+		RankBtn.setSize(150, 40);					
+		RankBtn.setLocation(450, 300);				
+		RankBtn.setForeground(Color.WHITE);			
+		RankBtn.setBackground(new Color(0x5e3023));		
+		RankBtn.setFont(new Font("Neo�ձٸ�", Font.PLAIN, 20));	
+		contentPane.add(RankBtn); 
 		
 		/*-----------------------------------Title-----------------------------------*/
 		JLabel Title = new JLabel("Kuma-Gotchi", SwingConstants.CENTER);
-		Title.setBounds(210, 40, 274, 50);
-		Title.setFont(new Font("Neo둥근체", Font.BOLD, 40));
+		Title.setBounds(210, 60, 274, 50);
+		Title.setFont(new Font("Neo�ձٸ�", Font.BOLD, 40));
 		Title.setForeground(Color.WHITE);
 		contentPane.add(Title);
 		
-		/*-------------------------------Bear Mode Select Button---------------------------------*/
-		JButton BearModeBtn = new JButton("");
-		BearModeBtn.setIcon(new ImageIcon("images/BearBtn.png"));
-		BearModeBtn.setSelectedIcon(new ImageIcon("images/BearBtn.png"));
-		BearModeBtn.setBounds(275, 210, 140, 30);
-		BearModeBtn.setPressedIcon(new ImageIcon("images/BearBtnPress.png"));
-		contentPane.add(BearModeBtn);
-		
-		/*---------------------------------Fish Mode Select Button----------------------------------*/
-		JButton FishModeBtn = new JButton("");
-		FishModeBtn.setIcon(new ImageIcon("images/FishBtn.png"));
-		FishModeBtn.setSelectedIcon(new ImageIcon("images/FishBtn.png"));
-		FishModeBtn.setBounds(275, 260, 140, 30);
-		FishModeBtn.setPressedIcon(new ImageIcon("images/FishBtnPress.png"));
-		contentPane.add(FishModeBtn);
-		
-		/*-------------------------------Infinite Mode Select Button---------------------------------*/
-		JButton InfiniteModeBtn = new JButton("");
-		InfiniteModeBtn.setIcon(new ImageIcon("images/InfiniteBtn.png"));
-		InfiniteModeBtn.setSelectedIcon(new ImageIcon("images/InfiniteBtn.png"));
-		InfiniteModeBtn.setBounds(275, 310, 140, 30);
-		InfiniteModeBtn.setPressedIcon(new ImageIcon("images/InfiniteBtnPress.png"));
-		contentPane.add(InfiniteModeBtn);
-		
-		/*-----------------------------------Option Window-----------------------------------*/
-		ImageIcon OptionWindow = new ImageIcon("images/OptionWindow.png");
-		Image img = OptionWindow.getImage();
-		Image changeImg = img.getScaledInstance(350,300,Image.SCALE_SMOOTH);
+		/*-----------------------------------Mascot-----------------------------------*/
+		ImageIcon Bear = new ImageIcon("images/mainbear.png");
+		Image img = Bear.getImage();
+		Image changeImg = img.getScaledInstance(350,350,Image.SCALE_SMOOTH);
 		ImageIcon changeIcon = new ImageIcon(changeImg);
-		JLabel OptionW = new JLabel(changeIcon);
-		OptionW.setBounds(175, 100, 350, 350);
-		contentPane.add(OptionW);
 		
-		/*-----------------------------------Right Bear-----------------------------------*/
-		ImageIcon RightBear = new ImageIcon("images/RightBear.png");
-		Image img2 = RightBear.getImage();
-		Image changeImg2 = img2.getScaledInstance(260,400,Image.SCALE_SMOOTH);
-		ImageIcon changeIcon2 = new ImageIcon(changeImg2);
-		JLabel RightBear1 = new JLabel(changeIcon2);
-		RightBear1.setBounds(450, 50, 260, 400);
-		contentPane.add(RightBear1);
-		
-		/*-----------------------------------Left Bear-----------------------------------*/
-		ImageIcon LeftBear = new ImageIcon("images/LeftBear.png");
-		Image img3 = LeftBear.getImage();
-		Image changeImg3 = img3.getScaledInstance(260,400,Image.SCALE_SMOOTH);
-		ImageIcon changeIcon3 = new ImageIcon(changeImg3);
-		JLabel LeftBear1 = new JLabel(changeIcon3);
-		LeftBear1.setBounds(-20, 50, 260, 400);
-		contentPane.add(LeftBear1);
+		JLabel MainBear = new JLabel(changeIcon);
+		MainBear.setBounds(175, 130, 350, 350);
+		contentPane.add(MainBear);
 		
 	}
+	
+
 }
