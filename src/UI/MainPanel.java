@@ -14,7 +14,7 @@ public class MainPanel extends JFrame {
 		BearModeBtn.setLocation(275, 300); 				// ���۹�ư ��ġ
 		BearModeBtn.setForeground(Color.WHITE);			// ���۹�ư �۾� ����
 		BearModeBtn.setBackground(new Color(0x013a63));	// ���۹�ư ����
-		BearModeBtn.setFont(new Font("Neo둥근체", Font.PLAIN, 20));	// ���۹�ư ��Ʈ
+		BearModeBtn.setFont(new Font("HYGungSo 굵게", Font.PLAIN, 20));	// ���۹�ư ��Ʈ
 		contentPane.add(BearModeBtn); // ���۹�ư �ޱ�
 		
 		/*---------------------------------물고기 모드 선택 버튼----------------------------------*/
@@ -23,7 +23,7 @@ public class MainPanel extends JFrame {
 		FishModeBtn.setLocation(450, 300);					// ��ŷ��ư ��ġ
 		FishModeBtn.setForeground(Color.WHITE);				// ��ŷ��ư �۾� ����
 		FishModeBtn.setBackground(new Color(0x5e3023));		// ��ŷ��ư ����
-		FishModeBtn.setFont(new Font("Neo둥근체", Font.PLAIN, 20));	// ��ŷ��ư ��Ʈ
+		FishModeBtn.setFont(new Font("Neo둥근모 Pro 보통", Font.PLAIN, 20));	// ��ŷ��ư ��Ʈ
 		contentPane.add(FishModeBtn); // ��ŷ��ư �ޱ�
 		/*-------------------------------무한 포식 모드 선택 버튼---------------------------------*/
 		JButton InfiniteModeBtn = new JButton("무한 포식 모드");
@@ -31,19 +31,19 @@ public class MainPanel extends JFrame {
 		InfiniteModeBtn.setLocation(100, 300); 				// ���۹�ư ��ġ
 		InfiniteModeBtn.setForeground(Color.WHITE);			// ���۹�ư �۾� ����
 		InfiniteModeBtn.setBackground(new Color(0x013a63));	// ���۹�ư ����
-		InfiniteModeBtn.setFont(new Font("Neo둥근체", Font.PLAIN, 20));	// ���۹�ư ��Ʈ
+		InfiniteModeBtn.setFont(new Font("Neo둥근모 Pro 보통", Font.PLAIN, 20));	// ���۹�ư ��Ʈ
 		contentPane.add(InfiniteModeBtn); // ���۹�ư �ޱ�
 		
 		/*-----------------------------------����-----------------------------------*/
 		JLabel Title = new JLabel("Kuma-Gotchi", SwingConstants.CENTER);
 		Title.setBounds(210, 60, 274, 50);
-		Title.setFont(new Font("Neo둥근체", Font.BOLD, 40));
+		Title.setFont(new Font("Neo둥근모 Pro 보통", Font.BOLD, 40));
 		Title.setForeground(Color.WHITE);
 		contentPane.add(Title);
 		/*-----------------------------------����-----------------------------------*/
 		JLabel ModeTitle = new JLabel("모드 선택", SwingConstants.CENTER);
 		Title.setBounds(210, 60, 274, 50);
-		Title.setFont(new Font("Neo둥근체", Font.BOLD, 40));
+		Title.setFont(new Font("Neo둥근모 Pro 보통", Font.BOLD, 40));
 		Title.setForeground(Color.WHITE);
 		contentPane.add(Title);
 		
