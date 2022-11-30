@@ -14,7 +14,7 @@ public class MainPanel extends JFrame {
 		BearModeBtn.setLocation(275, 300); 				// ���۹�ư ��ġ
 		BearModeBtn.setForeground(Color.WHITE);			// ���۹�ư �۾� ����
 		BearModeBtn.setBackground(new Color(0x013a63));	// ���۹�ư ����
-		BearModeBtn.setFont(new Font("HYGungSo 굵게", Font.PLAIN, 20));	// ���۹�ư ��Ʈ
+		BearModeBtn.setFont(new Font("Neo둥근모 Pro 보통", Font.PLAIN, 20));	// ���۹�ư ��Ʈ
 		contentPane.add(BearModeBtn); // ���۹�ư �ޱ�
 		
 		/*---------------------------------물고기 모드 선택 버튼----------------------------------*/
