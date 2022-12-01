@@ -2,6 +2,8 @@ package UI;
 import java.awt.*;
 import javax.swing.*;
 import UI.*;
+import UI.Frame;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -46,12 +48,24 @@ public class MainPanel extends JFrame {
 		JLabel MainBear = new JLabel(changeIcon);
 		MainBear.setBounds(175, 130, 350, 350);
 		contentPane.add(MainBear);
-		
+        
 		StartBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new ModeSelectPanel(frame);
-                setVisible(false); // 창 안보이게 하기 
+            	frame.setVisible(false);
+        		Frame newframe = new Frame();
+        		new ModeSelectPanel(newframe.frame);
+        		newframe.frame.setVisible(true);
+            }
+        });
+		
+		RankBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+            	frame.setVisible(false);
+        		Frame newframe = new Frame();
+        		new RankPanel(newframe.frame);
+        		newframe.frame.setVisible(true);
             }
         });
 	}

@@ -66,7 +66,5 @@ public class ModeSelectPanel extends JFrame {
 		JLabel LeftBear1 = new JLabel(changeIcon3);
 		LeftBear1.setBounds(-20, 50, 260, 400);
 		contentPane.add(LeftBear1);
-		
-		setVisible(true);
 	}
 }
