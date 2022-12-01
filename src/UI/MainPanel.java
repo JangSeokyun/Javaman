@@ -48,27 +48,29 @@ public class MainPanel extends JFrame {
 		JLabel MainBear = new JLabel(changeIcon);
 		MainBear.setBounds(175, 130, 350, 350);
 		contentPane.add(MainBear);
-        
+		
 		StartBtn.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-            	frame.setVisible(false);
-        		Frame newframe = new Frame();
-        		new ModeSelectPanel(newframe.frame);
-        		newframe.frame.setVisible(true);
-            }
-        });
+	        @Override
+	        public void actionPerformed(ActionEvent e) {
+	        	frame.setVisible(false);
+	    		Frame newframe = new Frame();
+	    		new ModeSelectPanel(newframe.frame);
+	    		newframe.frame.setVisible(true);
+	        }
+	    });
 		
 		RankBtn.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-            	frame.setVisible(false);
-        		Frame newframe = new Frame();
-        		new RankPanel(newframe.frame);
-        		newframe.frame.setVisible(true);
-            }
-        });
+	        @Override
+	        public void actionPerformed(ActionEvent e) {
+	        	frame.setVisible(false);
+	    		Frame newframe = new Frame();
+	    		new RankPanel(newframe.frame);
+	    		newframe.frame.setVisible(true);
+	        }
+	    });
+		
 	}
 	
+
 
 }

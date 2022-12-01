@@ -1,5 +1,8 @@
 package UI;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.*;
 
 public class RankPanel extends JFrame {
@@ -34,5 +37,15 @@ public class RankPanel extends JFrame {
 		JLabel RankW = new JLabel(rankChangeIcon2);
 		RankW.setBounds(230, 0, 450, 450);
 		contentPane.add(RankW);
+		
+		HomeBtn.addActionListener(new ActionListener() {
+	        @Override
+	        public void actionPerformed(ActionEvent e) {
+	        	frame.setVisible(false);
+	    		Frame newframe = new Frame();
+	    		new MainPanel(newframe.frame);
+	    		newframe.frame.setVisible(true);
+	        }
+	    });
 	}
 }
