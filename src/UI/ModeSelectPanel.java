@@ -67,5 +67,6 @@ public class ModeSelectPanel extends JFrame {
 		LeftBear1.setBounds(-20, 50, 260, 400);
 		contentPane.add(LeftBear1);
 		
+		setVisible(true);
 	}
 }
