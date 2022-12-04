@@ -1,5 +1,8 @@
 package UI;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.*;
 
 public class ModeSelectPanel extends JFrame {
@@ -66,5 +69,16 @@ public class ModeSelectPanel extends JFrame {
 		JLabel LeftBear1 = new JLabel(changeIcon3);
 		LeftBear1.setBounds(-20, 50, 260, 400);
 		contentPane.add(LeftBear1);
+		
+		BearModeBtn.addActionListener(new ActionListener() {
+	        @Override
+	        public void actionPerformed(ActionEvent e) {
+	        	frame.setVisible(false);
+	    		Frame newframe = new Frame();
+	    		new Map(newframe.frame);
+	    		newframe.frame.setVisible(true);
+	        }
+	    });
+
 	}
 }
